@@ -1,1 +1,1 @@
-# vite-sass-boilerplate
+# Vite x Sass Boilerplate
