@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    "autoprefixer",
+    {
+      "order": "smacss",
+      "require": "css-declaration-sorter"
+    },
+    {
+      "sort": "mobile-first",
+      "require": "postcss-sort-media-queries"
+    }
+  ]
+}
+
