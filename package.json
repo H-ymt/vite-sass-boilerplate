@@ -11,7 +11,6 @@
     "lint": "pnpm biome lint ./src"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.5.1",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "autoprefixer": "^10.4.16",
     "css-declaration-sorter": "^7.1.1",
