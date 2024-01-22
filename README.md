@@ -6,13 +6,31 @@ Viteを使用した、静的サイト制作のためのボイラープレート�
 
 ## スクリプト
 
-- `dev`: 開発サーバーを起動します。
-- `build`: プロジェクトをビルドします。
-- `preview`: ビルドしたプロジェクトをプレビューします。
-- `format`: Biomeを使用してソースコードをフォーマットします。
-- `lint`: Biomeを使用してソースコードのリントを行います。
+- `pnpm dev`: 開発サーバーを起動します。
+- `pnpm build`: プロジェクトをビルドします。
+- `pnpm preview`: ビルドしたプロジェクトをプレビューします。
+- `pnpm format`: ソースコードをフォーマットします。
+- `pnpm lint`: MarkupLint, ESLint, StyleLintを実行します。
 
-## 開発の始め方
+## 特徴
+
+このボイラープレートでは次の機能が含まれています。
+
+- [MarkupLint](https://markuplint.dev/ja/): HTML構文をチェックします。
+
+- [StyleLint](https://stylelint.io/)：CSS, Sassの静的解析及び構文チェックを行います。
+
+- [ESLint](https://eslint.org/)：JavaScriptの静的解析を行います。
+
+- [Prettier](https://prettier.io/)：コードのフォーマットを行います。
+
+- [Handlebars](https://handlebarsjs.com/):シンプルなテンプレートエンジンです。
+
+- 画像圧縮のプラグインを入れる場合は[こちら](https://flex-box.net/vite-for-coder/#co-index-7)
+
+## 開発の仕方
+
+### コマンド
 
 - [リポジトリ](https://github.com/H-ymt/vite-sass-boilerplate)をクローン
 
@@ -44,12 +62,11 @@ pnpm build
 pnpm preview
 ```
 
-## 特徴
+### テンプレートエンジン
 
-このボイラープレートでは次の機能が含まれています。
+テンプレートエンジンに[Handlebars](https://handlebarsjs.com/)を導入しています。
+`src/components`ディレクトリ配下にサイト共通のコンポーネント(ヘッダー等)を記述し`{{> header}}`で呼び出すことができます。
 
-- [Biome](https://biomejs.dev/)：JavaScriptのフォーマットと解析を行います。
+### 画像の読み込み
 
-- [Prettier](https://prettier.io/)：JavaScript以外のHTML及びCSSのフォーマットを行います。
-
-- [PostCSS](https://postcss.org/)：CSSファイルのデバックや圧縮処理を行います。
+画像は絶対パス（`/public/images/javascript.svg`）で書きます。（相対パスだとサブディレクトリの`/contact/index.html`ファイルなどで画像が表示されません。）
